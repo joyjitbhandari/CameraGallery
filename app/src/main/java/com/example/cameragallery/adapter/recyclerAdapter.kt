@@ -12,7 +12,6 @@ import com.example.cameragallery.model.Datamodel
 class recyclerAdapter(var uriList:ArrayList<Datamodel>,var context: Context) : RecyclerView.Adapter<recyclerAdapter.viewHolder>(){
     class viewHolder(var binding:ItemviewBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(datamodel: Datamodel, context: Context) {
-
             Log.d("videourl","${datamodel.video},${datamodel.uri}")
             if(datamodel.video) {
                 val mMMR = MediaMetadataRetriever();

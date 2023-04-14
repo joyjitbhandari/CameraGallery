@@ -27,11 +27,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getPermission()
-
-        binding.btnCamera.setOnClickListener(this)
-        binding.imgGalleryBtn.setOnClickListener(this)
-        binding.btnVideocam.setOnClickListener(this)
-        binding.vidGalleryBtn.setOnClickListener(this)
     }
 
     // to get permission

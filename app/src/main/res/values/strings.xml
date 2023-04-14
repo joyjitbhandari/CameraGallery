@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CameraGallery</string>
     <string name="photos">Photos</string>
+    <string name="camera">camera</string>
+    <string name="videos">Videos</string>
+    <string name="record">Record</string>
 </resources>
