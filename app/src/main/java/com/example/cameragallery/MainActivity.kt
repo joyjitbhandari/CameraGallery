@@ -6,10 +6,12 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cameragallery.adapter.recyclerAdapter
 import com.example.cameragallery.databinding.ActivityMainBinding
+import com.example.cameragallery.databinding.ItemviewBinding
 import com.example.cameragallery.model.Datamodel
 
 
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val pic_id = 1
     private val vid_id = 2
     private lateinit var binding: ActivityMainBinding
+    private lateinit var binding_item: ItemviewBinding
 
     private var imageList = ArrayList<Datamodel>()
     private var videoList = ArrayList<Datamodel>()
@@ -25,6 +28,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding_item = ItemviewBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
         getPermission()
     }
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (permissionslist.size > 0) {
             requestPermissions(permissionslist.toTypedArray(), 101)
         }
+
     }
 
     override fun onClick(view: View) {
